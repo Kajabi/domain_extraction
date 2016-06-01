@@ -1,8 +1,6 @@
 # DomainExtraction
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/domain_extraction`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+DomainExtraction provides a simple interface for extracing domains and tlds from hostnames.
 
 ## Installation
 
@@ -22,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+extraction = DomainExtraction.new
+extraction.extract_tld("www.domain.com") # => "com"
+extraction.extract_tld("www.domain.co.uk") # => "co.uk"
+extraction.extract_domain("www.domain.com") # => "domain.com"
+extraction.extract_domain("www.domain.co.uk") # => "domain.co.uk"
+```
 
 ## Development
 
@@ -32,7 +36,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/domain_extraction.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Kajabi/domain_extraction.
 
 
 ## License
