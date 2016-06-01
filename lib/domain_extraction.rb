@@ -1,10 +1,9 @@
 require "domain_extraction/version"
 
 class DomainExtraction
-  def initialize
+  def initialize(dat_source = File.open("#{File.dirname(__FILE__)}/../data/public_suffix_list.dat", "r:UTF-8"))
     @tlds = Set.new
-
-    load_tlds
+    load_tlds(dat_source)
   end
 
   def extract_domain(hostname)
@@ -29,12 +28,8 @@ class DomainExtraction
 
   attr_reader :tlds
 
-  def dat_file
-    File.open("#{File.dirname(__FILE__)}/../data/public_suffix_list.dat", "r:UTF-8")
-  end
-
-  def load_tlds
-    dat_file.each_line do |line|
+  def load_tlds(dat_source)
+    dat_source.each_line do |line|
       line = line.strip
       unless line.empty? || line.start_with?("//")
         tlds << line
