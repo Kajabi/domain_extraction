@@ -1,6 +1,6 @@
 # DomainExtraction
 
-DomainExtraction provides a simple interface for extracing domains and tlds from hostnames.
+DomainExtraction provides a simple interface for extracting domains and tlds from hostnames.
 
 ## Installation
 
