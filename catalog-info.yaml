@@ -15,10 +15,10 @@ metadata:
     - extract
     - parse
   annotations:
-    backstage.io/source-location: url:https://github.com/Kajabi/domain-extraction/tree/main
+    backstage.io/source-location: url:https://github.com/Kajabi/domain-extraction/tree/master
     github.com/project-slug: Kajabi/domain-extraction
 spec:
   system: kajabi-products
   type: gem
-  owner: standard-model
+  owner: messaging
   lifecycle: production
