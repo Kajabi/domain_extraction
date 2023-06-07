@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: domain-extraction
+  description: |
+    DomainExtraction provides a simple interface for extracting domains and tlds from hostnames.
+  tags:
+    - gem
+    - ruby
+    - domain
+    - tld
+    - hostname
+    - url
+    - uri
+    - extract
+    - parse
+  annotations:
+    backstage.io/source-location: url:https://github.com/Kajabi/domain-extraction/tree/main
+    github.com/project-slug: Kajabi/domain-extraction
+spec:
+  system: kajabi-products
+  type: gem
+  owner: standard-model
+  lifecycle: production
